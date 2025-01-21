@@ -1,4 +1,4 @@
-import { checkAuth, withAuth } from '@auth';
+import { withAuth } from '@auth';
 import { Layout } from '@components';
 
 const Page = () => {
@@ -11,9 +11,5 @@ const Page = () => {
     </Layout>
   );
 };
-
-export async function getServerSideProps(context) {
-  return await checkAuth(context);
-}
 
 export default withAuth(Page);
