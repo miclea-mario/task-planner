@@ -11,7 +11,6 @@ export { default as Layout } from './Layout';
 export { default as Link } from './Link';
 export { default as Loading } from './Loading';
 export { default as Logo } from './Logo';
-export { default as Menu } from './Menu';
 export { default as MenuButton } from './MenuButton';
 export { default as MenuGroup } from './MenuGroup';
 export { default as MenuItem } from './MenuItem';

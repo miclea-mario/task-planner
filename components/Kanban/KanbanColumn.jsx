@@ -1,7 +1,7 @@
 import { classnames } from '@lib';
 import TaskCard from './TaskCard';
 
-const KanbanColumn = ({ status, tasks, executants, refetch }) => {
+const KanbanColumn = ({ status, tasks, executants = [], refetch, role = 'executant' }) => {
   const statusGradientBackgroundMap = {
     open: 'bg-gradient-to-r from-amber-50 to-amber-100',
     pending: 'bg-gradient-to-r from-orange-50 to-orange-100',
@@ -27,8 +27,11 @@ const KanbanColumn = ({ status, tasks, executants, refetch }) => {
         {status.toUpperCase()}
       </h3>
       <div className="flex flex-col gap-2">
+        {tasks.length === 0 && (
+          <p className="text-gray-300 text-center py-16">You will see {status} tasks here</p>
+        )}
         {tasks.map((task, index) => (
-          <TaskCard key={index} task={task} executants={executants} refetch={refetch} />
+          <TaskCard key={index} task={task} executants={executants} refetch={refetch} role={role} />
         ))}
       </div>
     </div>

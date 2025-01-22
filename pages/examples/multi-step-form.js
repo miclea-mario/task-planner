@@ -1,6 +1,5 @@
 import { withAuth } from '@auth';
 import { Layout, NoSsr } from '@components';
-import { Documentation } from '@examples/components';
 import { MultiStepForm } from '@examples/components/Multistep';
 
 const Page = () => {
@@ -10,7 +9,6 @@ const Page = () => {
         <NoSsr>
           <MultiStepForm />
         </NoSsr>
-        <Documentation />
       </div>
     </Layout>
   );
