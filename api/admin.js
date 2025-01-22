@@ -5,5 +5,5 @@ export const changePassword = (data) => {
 };
 
 export const addUser = (data) => {
-  return axiosAuth.post('/admin/users/add', data);
+  return axiosAuth.post('/admin/users', data);
 };
